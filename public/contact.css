@@ -61,6 +61,10 @@ aside {
     border-radius: 5px;
 }
 
+textarea {
+    height: 10rem;
+}
+
 .btn-submit {
     background-color: darkgoldenrod;
     color: white;
