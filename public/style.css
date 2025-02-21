@@ -9,7 +9,7 @@
 }
 
 body {
-    padding-top: 15rem;
+    padding-top: 7rem;
     margin: 0;
 }
 /* ============================= */
@@ -32,8 +32,31 @@ body {
 .logo img {
     height: 3rem;
 }
+/* Cache le menu par défaut */
+.nav_links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: darkgoldenrod; /* Assure un fond visible */
+    position: absolute;
+    top: 60px; /* Ajuste selon la hauteur de ta navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-/* Liens de navigation */
+/* Afficher le menu quand il a la classe active */
+.nav_links.active {
+    display: flex;
+    width: 100vh;
+    margin-top: 10px;
+}
+
+/* Style des liens */
 .nav_link {
     color: white;
     text-decoration: none;
@@ -41,6 +64,7 @@ body {
     font-weight: bold;
     padding: 10px;
     display: block;
+    text-align: center;
     width: 100%;
     transition: 0.3s ease-in-out;
 }
@@ -50,6 +74,14 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
+
+/* Bouton dropdown */
+.dropdown {
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
 
 /* ============================= */
 /*            FOOTER             */
@@ -83,14 +115,13 @@ footer {
     color: darkgoldenrod;
     border: dotted 3px darkgoldenrod;
     width: fit-content;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 5px;
     text-align: center;
-    margin-top: 5rem;
 }
 
 /* ============================= */
-/*        INTRO (inchangé)       */
+/*             INTRO             */
 /* ============================= */
 .intro {
     text-align: center;
@@ -159,7 +190,7 @@ p {
 }
 
 /* ============================= */
-/*      TABLEAU (inchangé)       */
+/*            TABLEAU            */
 /* ============================= */
 .service_table {
     border-collapse: separate;
@@ -196,6 +227,9 @@ th {
     width: .7rem;
 }
 
+.foot_link:visited {
+    color: white;
+}
 
 /* ============================= */
 /*          RESPONSIVE           */
@@ -259,6 +293,14 @@ th {
 
     td:hover {
         font-size: 2rem;
+    }
+
+    .dropdown {
+        display: none;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
     }
 }
 
