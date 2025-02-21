@@ -120,6 +120,16 @@ footer {
     text-align: center;
 }
 
+.paragraph {
+    margin-top: 7rem;
+}
+
+.phone {
+    border: none;
+    border-bottom: darkgoldenrod solid 3px;
+    font-size: 2rem;
+}
+
 /* ============================= */
 /*             INTRO             */
 /* ============================= */
@@ -235,9 +245,19 @@ th {
 /*          RESPONSIVE           */
 /* ============================= */
 @media (min-width: 768px) {
+
+    body {
+        margin-top: 10rem;
+    }
+
+    a.logo {
+        z-index: 100;
+    }
+
     .navbar {
         flex-direction: row;
         justify-content: space-around;
+        height: 5rem;
     }
 
     /* Logo */
@@ -250,6 +270,13 @@ th {
         display: inline-block;
         width: auto;
     }
+
+
+.phone {
+    border: none;
+    border-bottom: darkgoldenrod solid 3px;
+    font-size: 3rem;
+}
 
     .service_table {
         border-collapse: separate;
@@ -301,6 +328,7 @@ th {
     .nav_links {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 

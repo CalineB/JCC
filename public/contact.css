@@ -11,9 +11,12 @@ body {
     padding-top: 80px;
 }
 
+h2 {
+    border-bottom: solid darkgoldenrod 3px;
+    margin: 2rem 0 1rem 0;
+}
 
-
-/* Contact Section */
+/* Contact Section - Mobile First */
 .contact {
     display: flex;
     flex-direction: column;
@@ -54,7 +57,8 @@ aside {
     font-weight: bold;
 }
 
-.formulaire input, .formulaire textarea {
+.formulaire input, 
+.formulaire textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -78,4 +82,31 @@ textarea {
 
 .btn-submit:hover {
     background-color: goldenrod;
+}
+
+/* 🖥️ Version Grand Écran (Tablettes & PC) */
+@media screen and (min-width: 768px) {
+    .contact {
+        flex-direction: row; /* Deux colonnes */
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    aside {
+        text-align: left;
+        margin-bottom: 0;
+        max-width: 300px;
+    }
+
+    .contact-form {
+        width: 50%;
+        max-width: 600px;
+    }
+
+
+.formulaire input, 
+.formulaire textarea {
+    width: 25rem;
+}
 }
