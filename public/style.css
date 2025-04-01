@@ -124,6 +124,10 @@ footer {
     margin-top: 7rem;
 }
 
+.secondary {
+    margin-top: 3rem;
+}
+
 .phone {
     border: none;
     border-bottom: darkgoldenrod solid 3px;
@@ -153,10 +157,10 @@ p {
 /* ============================= */
 .services_section {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .7rem;
     justify-items: center;
-    padding: 1rem;
+    padding: .7rem;
 }
 
 .service {
@@ -165,12 +169,11 @@ p {
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 300px;
 }
 
 .service_img {
     width: 100%;
-    width: 12rem;
+    max-width: 250px;
     height: 12rem;
     border-radius: 10px;
     margin: 3rem 0;
