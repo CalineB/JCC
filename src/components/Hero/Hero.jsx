@@ -25,7 +25,7 @@ const Hero = ({theme}) => {
                     </p>
 
                     <h1 data-aos="fade-up" data-aos-delay="600"
-                        className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-serif leading-tight">Le service de nettoyage automobile que vous attendiez
+                        className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-serif leading-tight">Lavage automobile à l'eau de mer
                     </h1>
                    
                     <p data-aos="fade-up" data-aos-delay= "1000">au Gosier

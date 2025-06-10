@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About";
+import Services from "./components/Sevices/Services";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Diamond from "./components/Diamond";
@@ -38,6 +39,7 @@ const App = () => {
    <Hero theme = { theme }/>
    <About theme = { theme }/>
    <Diamond theme = { theme }/>
+   <Services theme = { theme }/>
   </div>)
 };
 
