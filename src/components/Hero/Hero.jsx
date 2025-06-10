@@ -3,7 +3,7 @@ import BlackCar_Front from "../../assets/BlackCar_Front.png";
 import RedCar_Right from "../../assets/RedCar_Right.png";
 
 const Hero = ({theme}) => {
-    return <div className="dark:bg-black dark:text-white duration-300 relative -z-20">
+    return <div className="dark:bg-black dark:text-white duration-300 relative z-20">
         <div className="container min-h-[620px] flex">
             <div className="grid place-items-center grid-cols-1 sm:grid-cols-2">
                
@@ -19,11 +19,21 @@ const Hero = ({theme}) => {
                     </div>
                 </div>
 
-                <div className="order-2 sm:order-1 space-y-5 sm:pr-32">
-                    <p className="text-primary text-2xl font-serif">Jacob's clean car's</p>
-                    <h1 className="text 5xl lg:text-7xl font-semibold font-serif">Le service de nettoyage automobile que vous attendiez</h1>
-                    <p>au Gosier</p>
-                    <button className="btn bg-primary text-black px-6 py-2 rounded-md hover:bg-primary/80 duration-300">Prise de rendez-vous</button>
+                <div className="order-2 sm:order-1 space-y-5 sm:pr-32 pt-10 sm:pt-20">
+                    <p data-aos="fade-up"
+                        className="text-primary text-xl sm:text-2xl font-serif">Jacob's clean cars
+                    </p>
+
+                    <h1 data-aos="fade-up" data-aos-delay="600"
+                        className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-serif leading-tight">Le service de nettoyage automobile que vous attendiez
+                    </h1>
+                   
+                    <p data-aos="fade-up" data-aos-delay= "1000">au Gosier
+                    </p>
+                    
+                    <button data-aos="fade-up" data-aos-delay= "1500"
+                     className="btn bg-primary text-black px-6 py-2 rounded-md hover:bg-primary/80 duration-300">Prise de rendez-vous
+                    </button>
                 </div>
             </div>
         </div>

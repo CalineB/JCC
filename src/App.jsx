@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero/Hero"
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Diamond from "./components/Diamond";
 
 const App = () => {
   const [theme, setTheme] = React.useState(
@@ -32,9 +34,10 @@ const App = () => {
 
   return (
   <div>  
-   <Navbar theme={theme} setTheme=
-   {setTheme} />
-   <Hero theme={theme}/>
+   <Navbar theme = { theme } setTheme = { setTheme } />
+   <Hero theme = { theme }/>
+   <About theme = { theme }/>
+   <Diamond theme = { theme }/>
   </div>)
 };
 

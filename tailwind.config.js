@@ -9,7 +9,16 @@ export default {
     extend: {
       colors: {
         primary: "#ca9728",
-        dark: "#010110",
+        dark: "#111111",
+      },
+      keyframes: {
+        spinY: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
+        },
+      },
+      animation: {
+        'spin-y-slow': 'spinY 5s linear infinite',
       },
       container: {
         center: true,
