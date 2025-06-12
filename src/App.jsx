@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About";
 import Services from "./components/Sevices/Services";
+import Prices from "./components/Prices/Prices";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Diamond from "./components/Diamond";
@@ -40,6 +41,7 @@ const App = () => {
    <About theme = { theme }/>
    <Diamond theme = { theme }/>
    <Services theme = { theme }/>
+   <Prices theme = { theme } />
   </div>)
 };
 

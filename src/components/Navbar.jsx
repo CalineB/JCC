@@ -21,16 +21,16 @@ const NavLinks = [
         name: "Nos services",
         link: "/#services"
     },
-    {
-        id: "4",
-        name: "Prendre rendez-vous",
-        link: "/#contacts"
-    },
-    {
-        id: "5 ",
+        {
+        id: "4 ",
         name: "Nos tarifs",
         link: "/#tarifs"
     },
+    {
+        id: "5",
+        name: "Prendre rendez-vous",
+        link: "/#contacts"
+    }
 ]
 
 const Navbar = ({theme, setTheme}) => {
