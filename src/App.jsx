@@ -4,10 +4,11 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About";
 import Services from "./components/Sevices/Services";
 import Prices from "./components/Prices/Prices";
-import Footer  from "./components/Footer/Footer"
+import Contacts from "./components/Contacts/Contacts"
+import Footer  from "./components/Footer/Footer";
+import BackToTopButton from "./components/HomeBtn/HomeBtn";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Diamond from "./components/Diamond";
 
 const App = () => {
   const [theme, setTheme] = React.useState(
@@ -39,10 +40,12 @@ const App = () => {
   <div>  
     <Navbar theme = { theme } setTheme = { setTheme } />
     <Hero theme = { theme }/>
-    <About />
+    <About theme = { theme } />
     <Services />
     <Prices />
+    <Contacts />
     <Footer />
+    <BackToTopButton />
   </div>)
 };
 

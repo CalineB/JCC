@@ -7,22 +7,22 @@ import JCC_Logo_Black from "../assets/JCC_Logo_Black.png";
 
 const NavLinks = [
     {
-        name: "Accueil",
-        link: "/#accueil"
-    },
-    {
+        id: "1",
         name: "Notre concept",
         link: "/#concept"
     },
     {
+        id: "2",
         name: "Nos services",
         link: "/#services"
     },
         {
+        id: "3",
         name: "Nos tarifs",
         link: "/#tarifs"
     },
     {
+        id: "4",
         name: "Prendre rendez-vous",
         link: "/#contacts"
     }
