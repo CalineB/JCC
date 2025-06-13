@@ -42,10 +42,10 @@ const skillsData = [
 
 
 const Services = () => {
-    return <div className="py-14 dark:bg-black dark:text-white sm:min-h[600px] sm:grid sm:place-items-center">
+    return <div id="services" className="py-14 dark:bg-black dark:text-white sm:min-h[600px] sm:grid sm:place-items-center">
         <div className="container">
             <div className="pb-12">
-                <h1 className="text-3xl font-semibold text-center font-serif sm:text-4xl">Nos services</h1>
+                <h1 data-aos="fade-up" className="text-3xl font-semibold text-center font-serif sm:text-4xl">Nos services</h1>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 {
@@ -55,7 +55,7 @@ const Services = () => {
                             <div className="grid place-items-center">{skill.icon}</div>
                             <h1>{skill.name}</h1>
                             <p>{skill.description}</p>
-                            <a href={skill.link}>En savoir plus</a>
+                            <a className="text-primary pt-2 inline-block group-hover:text-white" href={skill.link}>En savoir plus</a>
                         </div>
                     ))
                 }

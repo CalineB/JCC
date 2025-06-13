@@ -58,7 +58,7 @@ export function PriceSelector() {
   });
 
   return (
-    <div className="p-6">
+    <div id="tarifs" className="p-6">
         <div className="flex justify-center gap-4 mb-6 ">
             {["Citadine", "Berline", "SUV", "À la carte"].map((type) => (
             <button 
@@ -71,7 +71,7 @@ export function PriceSelector() {
             ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filtered.map((item, index) => (
             <div
                 key={`${item.title}-${item.vehicleType || "A-la-carte"}`}
@@ -80,7 +80,7 @@ export function PriceSelector() {
                 data-aos-delay={index * 100}>
 
             <div className="flex justify-between items-center">
-                <h3 className="text-black font-semibold dark:text-white group-hover:text-black transition-colors">{item.title}</h3>
+                <h3 className="text-black font-semibold dark:text-primary group-hover:text-black transition-colors">{item.title}</h3>
                 <span className="text-primary font-bold text-lg group-hover:text-white transition-colors">
                 {typeof item.price === "number" ? `${item.price} €` : item.price}
                 </span>
@@ -101,7 +101,10 @@ const Prices = () => {
             <h1 data-aos="fade-up" className="text-3xl text-center sm:text-4xl font-semibold font-serif mb-3">Nos tarifs</h1>
             <p data-aos="fade-up" className="text-sm pb-10 text-center">Choisissez un type de véhicule pour filtrer les services proposés.</p>
             <PriceSelector items={PricesList} />
-            <div>
+            <div className="grid place-content-center mt-8">
+                <button data-aos="fade-up" className= "button-outline">
+                    Prendre rendez-vous
+                </button>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ import BlackCar_Front from "../../assets/BlackCar_Front.png";
 import RedCar_Right from "../../assets/RedCar_Right.png";
 
 const Hero = ({theme}) => {
-    return <div className="dark:bg-black dark:text-white duration-300 relative z-20">
+    return <div id="accueil" className="dark:bg-black dark:text-white duration-300 relative z-20">
         <div className="container min-h-[620px] flex">
             <div className="grid place-items-center grid-cols-1 sm:grid-cols-2">
                

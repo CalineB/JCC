@@ -10,6 +10,8 @@ export default {
       colors: {
         primary: "#ca9728",
         dark: "#111111",
+        red: "#800d1b"
+
       },
       keyframes: {
         spinY: {

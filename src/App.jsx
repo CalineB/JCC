@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About";
 import Services from "./components/Sevices/Services";
 import Prices from "./components/Prices/Prices";
+import Footer  from "./components/Footer/Footer"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Diamond from "./components/Diamond";
@@ -36,12 +37,12 @@ const App = () => {
 
   return (
   <div>  
-   <Navbar theme = { theme } setTheme = { setTheme } />
-   <Hero theme = { theme }/>
-   <About theme = { theme }/>
-   <Diamond theme = { theme }/>
-   <Services theme = { theme }/>
-   <Prices theme = { theme } />
+    <Navbar theme = { theme } setTheme = { setTheme } />
+    <Hero theme = { theme }/>
+    <About />
+    <Services />
+    <Prices />
+    <Footer />
   </div>)
 };
 

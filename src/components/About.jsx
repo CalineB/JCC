@@ -5,7 +5,7 @@ import Diamond from "./Diamond";
 
 
 const About = ({theme}) => {
-    return <div className="dark:bg-dark bg-slate-100 dark:text-white duration-300 sm:min-h-[600px] sm:grid sm:place-items-center">
+    return <div id="concept" className="dark:bg-dark bg-slate-100 dark:text-white duration-300 sm:min-h-[600px] sm:grid sm:place-items-center">
         <div className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center mr-[55px]">
             <Canvas camera={{ position: [5, 2, 7], fov: 45 }} style={{width: "145%", height:"400px"}}>
