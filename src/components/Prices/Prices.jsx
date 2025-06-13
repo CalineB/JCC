@@ -58,7 +58,7 @@ export function PriceSelector() {
   });
 
   return (
-    <div id="tarifs" className="p-6">
+    <div className="p-6">
         <div className="flex justify-center gap-4 mb-6">
             {["Citadine", "Berline", "SUV", "À la carte"].map((type) => (
             <button 
@@ -96,7 +96,7 @@ export function PriceSelector() {
 }
 
 const Prices = () => {
-    return <div className="pb-24 pt-12 bg-slate-100 dark:bg-dark dark:text-white min-h-screen">
+    return <div id="tarifs" className="pb-24 pt-12 bg-slate-100 dark:bg-dark dark:text-white min-h-screen">
         <div className="container">
             <h1 data-aos="fade-up" className="text-3xl text-center sm:text-4xl font-semibold font-serif mb-3">Nos tarifs</h1>
             <p data-aos="fade-up" className="text-sm pb-10 text-center">Choisissez un type de véhicule pour filtrer les services proposés.</p>
