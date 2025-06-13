@@ -5,7 +5,7 @@ const FooterLinks = [
   { title: "Mentions légales", link: "/#" },
   { title: "Politique de confidentialité", link: "/#legal" },
   { title: "Conditions générales", link: "/#conditions" },
-  { title: "Nous contacter", link: "/#contacts" }
+  { title: "Nous écrire", link: "/#contacts" }
 ];
 
 const Footer = () => {
@@ -28,6 +28,16 @@ const Footer = () => {
                 <FaLinkedin className="text-2xl hover:text-primary duration-300" />
               </a>
             </div>
+            <div className="flex flex-col gap-2 mt-4 sm:hidden">
+              <a href="#" className="flex justify-center items-center gap-2 hover:text-primary duration-300">
+                <FaLocationArrow className="text-primary text-sm" />
+                Gosier, 97190 Guadeloupe
+              </a>
+              <a href="tel:+590690000000" className="flex justify-center items-center gap-2 hover:text-primary duration-300">
+                <FaMobileAlt className="text-primary text-sm" />
+                06 90 00 00 00
+              </a>
+            </div>
           </div>
           <div>
             <h1 className="text-xl sm:text-2xl font-bold mb-3">Liens utiles</h1>
@@ -41,14 +51,14 @@ const Footer = () => {
                 </li>
               ))}
 
-              <li className="hover:text-primary duration-300">
+              <li className="hover:text-primary duration-300 hidden sm:block">
                 <a href="#" className="flex justify-center items-center gap-2">
                   <FaLocationArrow className="text-primary text-sm" />
                   Gosier, 97190 Guadeloupe
                 </a>
               </li>
 
-              <li className="hover:text-primary duration-300">
+              <li className="hover:text-primary duration-300 hidden sm:block">
                 <a href="tel:+590690000000" className="flex justify-center items-center gap-2">
                   <FaMobileAlt className="text-primary text-sm" />
                   06 90 00 00 00
