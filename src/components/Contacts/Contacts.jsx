@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -11,8 +18,23 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitStatus("Votre message a bien été envoyé !");
-    setFormData({ name: "", email: "", message: "" });
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "contact",
+        ...formData,
+      }).toString(),
+    })
+      .then(() => {
+        setSubmitStatus("Votre message a bien été envoyé !");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("Form submission error:", error);
+        setSubmitStatus("Une erreur est survenue.");
+      });
   };
 
   return (
@@ -24,7 +46,19 @@ const Contact = () => {
 
       <div className="flex flex-col md:flex-row gap-14 max-w-5xl mx-auto">
         {/* Formulaire */}
-        <form onSubmit={handleSubmit} className="flex-1 bg-white dark:bg-dark p-8 rounded-lg shadow-md">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className="flex-1 bg-white dark:bg-dark p-8 rounded-lg shadow-md"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </p>
+
           <label className="block mb-6">
             <span className="block mb-2 font-semibold uppercase text-sm tracking-wide">Nom</span>
             <input
@@ -33,8 +67,8 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600"
               placeholder="Votre nom"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 transition"
             />
           </label>
 
@@ -46,35 +80,33 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600"
               placeholder="exemple@mail.com"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 transition"
             />
           </label>
 
-          <label className="block mb-8">
+          <label className="block mb-6">
             <span className="block mb-2 font-semibold uppercase text-sm tracking-wide">Message</span>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              rows="6"
+              rows="5"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600 resize-none"
               placeholder="Votre message"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 resize-none transition"
-            ></textarea>
+            />
           </label>
 
           <button
             type="submit"
-            className="w-full bg-primary text-white font-bold py-3 rounded-md hover:bg-primary-dark transition-colors duration-300 shadow-md"
+            className="w-full bg-primary text-white font-bold py-3 rounded-md hover:bg-primary-dark transition-colors duration-300"
           >
             Envoyer
           </button>
 
           {submitStatus && (
-            <p className="mt-5 text-green-600 dark:text-green-400 font-semibold animate-fadeIn">
-              {submitStatus}
-            </p>
+            <p className="mt-5 text-green-600 dark:text-green-400 font-semibold">{submitStatus}</p>
           )}
         </form>
 
@@ -95,7 +127,10 @@ const Contact = () => {
             <div className="bg-primary rounded-full p-3 text-white">
               <FaEnvelope size={20} />
             </div>
-            <a href="mailto:contact@jacobscleancars.com" className="text-lg hover:text-primary transition-colors">
+            <a
+              href="mailto:contact@jacobscleancars.com"
+              className="text-lg hover:text-primary transition-colors"
+            >
               contact@jacobscleancars.com
             </a>
           </div>
