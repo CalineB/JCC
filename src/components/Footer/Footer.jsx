@@ -72,7 +72,7 @@ const Footer = () => {
             <p>Les dimanches de 11h00 à 19h00</p>
             <p>Les lundis de 14h00 à 21h00</p>
             <p>Du mardi au jeudi de 7h00 à 18h00</p>
-            <p className="text-red">Fermé les vendredis et samedis</p>
+            <p className="text-red hover:text-primary">Fermé les vendredis et samedis</p>
           </div>
         </div>
       </div>

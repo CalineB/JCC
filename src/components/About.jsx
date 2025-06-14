@@ -46,7 +46,7 @@ const About = ({theme}) => {
                         </p>
 
                         <p data-aos="fade-up">
-                            <strong><button className="button-outline">Prenez rendez-vous</button></strong> et offrez à votre véhicule un soin d’exception, naturel et respectueux.
+                            <strong><button className="button-outline"><a href="/#contacts">Prenez rendez-vous</a></button></strong> et offrez à votre véhicule un soin d’exception, naturel et respectueux.
                         </p>
                     </div>
             </div>
