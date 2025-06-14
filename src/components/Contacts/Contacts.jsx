@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
+  FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaSms
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -45,7 +40,6 @@ const Contact = () => {
       <h2 className="text-4xl font-extrabold mb-10 text-center tracking-wide">Contactez-nous</h2>
 
       <div className="flex flex-col md:flex-row gap-14 max-w-5xl mx-auto">
-        {/* Formulaire */}
         <form
           name="contact"
           method="POST"
@@ -110,7 +104,6 @@ const Contact = () => {
           )}
         </form>
 
-        {/* Coordonnées */}
         <aside className="flex-1 max-w-md mx-auto md:mx-0 space-y-8">
           <h3 className="text-2xl font-semibold mb-6">Nos coordonnées</h3>
 
@@ -127,11 +120,22 @@ const Contact = () => {
             <div className="bg-primary rounded-full p-3 text-white">
               <FaEnvelope size={20} />
             </div>
+            <a href="mailto:jcc@gmx.fr" className="text-lg hover:text-primary transition-colors">
+              jcc@gmx.fr
+            </a>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="bg-primary rounded-full p-3 text-white">
+              <FaWhatsapp size={20} />
+            </div>
             <a
-              href="mailto:contact@jacobscleancars.com"
+              href="https://wa.me/590690000000"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-lg hover:text-primary transition-colors"
             >
-              contact@jacobscleancars.com
+              WhatsApp
             </a>
           </div>
 
@@ -143,19 +147,23 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-8 mt-8">
-            {[{
-              href: "https://facebook.com/jacobscleancars",
-              icon: <FaFacebookF />,
-              label: "Facebook"
-            }, {
-              href: "https://instagram.com/jacobscleancars",
-              icon: <FaInstagram />,
-              label: "Instagram"
-            }, {
-              href: "https://linkedin.com/company/jacobscleancars",
-              icon: <FaLinkedinIn />,
-              label: "LinkedIn"
-            }].map(({ href, icon, label }) => (
+            {[
+              {
+                href: "https://facebook.com/jacobscleancars",
+                icon: <FaFacebookF />,
+                label: "Facebook",
+              },
+              {
+                href: "https://instagram.com/jacobscleancars",
+                icon: <FaInstagram />,
+                label: "Instagram",
+              },
+              {
+                href: "https://linkedin.com/company/jacobscleancars",
+                icon: <FaLinkedinIn />,
+                label: "LinkedIn",
+              },
+            ].map(({ href, icon, label }) => (
               <a
                 key={label}
                 href={href}
@@ -169,6 +177,7 @@ const Contact = () => {
             ))}
           </div>
         </aside>
+
       </div>
     </section>
   );

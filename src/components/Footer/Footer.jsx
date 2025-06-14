@@ -2,8 +2,8 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt, FaChevronRight } from "react-icons/fa";
 
 const FooterLinks = [
-  { title: "Mentions légales", link: "/#" },
-  { title: "Politique de confidentialité", link: "/#legal" },
+  { title: "Mentions légales", link: "/Legals" },
+  { title: "Politique de confidentialité", link: "/Legals/#privacy" },
   { title: "Conditions générales", link: "/#conditions" },
   { title: "Nous écrire", link: "/#contacts" }
 ];
