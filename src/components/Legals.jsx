@@ -16,12 +16,12 @@ const Legals = () => {
 
   const services = [
     {
-      id: "seawater",
-      title: "Lavage écologique à l’eau de mer désalinisée",
+      id: "osmosis",
+      title: "Lavage haute pureté à l’eau osmosée",
       summary:
-        "Un nettoyage respectueux de l’environnement grâce à une eau de mer désalinisée innovante.",
+        "Un nettoyage sans traces ni dépôts minéraux grâce à une eau ultra pure issue de l’osmose inverse.",
       details:
-        "Notre procédé utilise exclusivement de l’eau de mer désalinisée pour garantir un lavage sans résidu ni produit chimique. Cette méthode respecte l’environnement, protège la peinture et les surfaces de votre véhicule tout en assurant une propreté irréprochable."
+        "Nous utilisons exclusivement de l’eau osmosée, purifiée par un procédé d’osmose inverse, pour garantir un lavage sans calcaire, sans résidus et sans risque pour la peinture. Cette méthode offre une finition parfaite tout en réduisant l’impact environnemental lié aux produits chimiques."
     },
     {
       id: "clean",

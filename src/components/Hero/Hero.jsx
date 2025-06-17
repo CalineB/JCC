@@ -25,10 +25,10 @@ const Hero = ({theme}) => {
                     </p>
 
                     <h1 data-aos="fade-up" data-aos-delay="600"
-                        className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-serif leading-tight">Lavage automobile à l'eau de mer
+                        className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-serif leading-tight">Detailing automobile
                     </h1>
                    
-                    <p data-aos="fade-up" data-aos-delay= "1000">au Gosier
+                    <p data-aos="fade-up" data-aos-delay= "1000">aux Abymes
                     </p>
                     
                     <button data-aos="fade-up" data-aos-delay= "1500"

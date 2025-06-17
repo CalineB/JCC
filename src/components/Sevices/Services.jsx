@@ -13,12 +13,12 @@ const skillsData = [
         aosDelay: "0",
     },
     {
-        name: "Utilisation d'eau de mer désalinisée",
+        name: "Utilisation d'eau osmosée",
         icon: (
             <FaWater className="text-5xl text-primary group-hover:text-black duration-300" />
         ),
-        link: "/Legals/#seawater",
-        description: "Nous utilisons une eau de mer désalinisée, écologique et durable, pour préserver les ressources tout en assurant une propreté optimale.",
+        link: "/Legals/#osmosis",
+        description: "Nous utilisons une eau osmosée ultra pure, sans minéraux ni calcaire, pour un lavage sans traces et respectueux de la carrosserie.",
         aosDelay: "500",
     },
     {

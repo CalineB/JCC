@@ -37,7 +37,7 @@ const About = ({theme}) => {
                             nous redonnons à votre voiture toute sa brillance grâce à un service soigné, personnalisé, et innovant.
                         </p>
                         <p data-aos="fade-up">
-                            Nous utilisons exclusivement de l’eau de mer désalinisée pour laver votre véhicule,
+                            Nous utilisons exclusivement de l’eau osmosée pour laver votre véhicule,
                             un procédé respectueux de l’environnement qui garantit un nettoyage optimal sans résidus. Chaque lavage est bien plus qu’un simple nettoyage : c’est un véritable soin automobile, réalisé à la main, dans le respect de votre véhicule et de votre confort.
                         </p>
                         <p data-aos="fade-up">
