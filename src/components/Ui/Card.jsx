@@ -1,4 +1,3 @@
-// src/components/Ui/Card.jsx
 import React from "react";
 
 export const Card = ({ title, children }) => {
@@ -17,5 +16,3 @@ export const CardContent = ({ children, className }) => {
     </div>
   );
 };
-
-export default { Card, CardContent };

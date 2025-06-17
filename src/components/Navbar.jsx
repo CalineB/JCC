@@ -44,7 +44,7 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <nav className="shadow-md bg-white dark:bg-[#000115] dark:text-white duration-300 pb-4">
+    <nav className="shadow-md bg-white dark:bg-[#000115] dark:text-white duration-300 pb-4 pt-4">
       <div className="container md:py-0">
         <div className="flex justify-between items-center ">
           <div className="h-16 flex items-center">
@@ -89,7 +89,7 @@ const Navbar = ({ theme, setTheme }) => {
                 className="text-2xl cursor-pointer"
               />
             )}
-            <a href="/LoginPage">
+            <a href="/connexion" className="hidden md:block">
                 <FaUserCircle
                 size={28}
                 className="cursor-pointer hover:text-primary transition-colors duration-300 m-2"

@@ -4,7 +4,7 @@ import { Button } from "./Ui/Button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./Ui/Tabs";
 import { Input } from "./Ui/Input";
 import { Textarea } from "./Ui/Textarea";
-import { CalendarDays, Car, User, CreditCard, FileText, MessageCircle, Star } from "lucide-react";
+import { CalendarDays, Car, User, FileText, MessageCircle, Star } from "lucide-react";
 
 const ClientDashboard = () => {
   return (

@@ -12,13 +12,15 @@ const ResponsiveMenu = ({ showMenu, menuRef, onLinkClick }) => {
     >
       <div className="card text-center">
         <div className="flex items-center justify-center gap-3">
+        <a href="/connexion">
           <FaUserCircle
             size={50}
             className="dark:hover:text-white cursor-pointer transition-colors duration-300"
           />
+        </a>
           <div>
-            <h1>Bienvenue chez JCC</h1>
             <h1>Salutations,</h1>
+            <h1>Bienvenue chez JCC</h1>
           </div>
         </div>
         <nav className="mt-12">

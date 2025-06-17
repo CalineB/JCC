@@ -10,9 +10,9 @@ import Footer from "./components/Footer/Footer";
 import BackToTopButton from "./components/HomeBtn/HomeBtn";
 import Legals from "./components/Legals";
 import ClientDashboard from "./components/ClientDashboard";
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
+import Register from "./components/Auth/RegisterPage";
 import LoginPage from "./components/Auth/LoginPage";
+import ForgotPwdPage from "./components/Auth/ForgotPwdPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -23,7 +23,6 @@ const MainPage = ({ theme }) => (
     <Services />
     <Prices />
     <Contacts />
-    <ClientDashboard />
   </>
 );
 
@@ -61,11 +60,11 @@ const App = () => {
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
           <Route path="/" element={<MainPage theme={theme} />} />
-          <Route path="/login" element={<Login setUser={setUser} />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard/*" element={user ? <ClientDashboard user={user} /> : <Navigate to="/login" />}/>
-          <Route path="/Legals" element={<Legals />} />
-          <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/demarrage" element={<Register />} />
+          <Route path="/tableaudebord/*" element={ <ClientDashboard /> } />
+          <Route path="/legals" element={<Legals />} />
+          <Route path="/connexion" element={<LoginPage setUser={setUser} />} />
+          <Route path="/reset" element={<ForgotPwdPage />} />
         </Routes>
         <Footer />
         <BackToTopButton />
