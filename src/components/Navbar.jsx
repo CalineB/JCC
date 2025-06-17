@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { VscLightbulb } from "react-icons/vsc";
 import { HiMenuAlt3 } from "react-icons/hi";
 import JCC_Logo_Gold from "../assets/JCC_Logo_Gold.png";
@@ -6,36 +6,41 @@ import JCC_Logo_Black from "../assets/JCC_Logo_Black.png";
 import ResponsiveMenu from "./ResponsiveMenu";
 
 export const NavLinks = [
-  {
-    id: "0",
-    link: "/#accueil",
-  },
-  {
-    id: "1",
-    name: "Notre concept",
-    link: "/#concept",
-  },
-  {
-    id: "2",
-    name: "Nos services",
-    link: "/#services",
-  },
-  {
-    id: "3",
-    name: "Nos tarifs",
-    link: "/#tarifs",
-  },
-  {
-    id: "4",
-    name: "Prendre rendez-vous",
-    link: "/#contacts",
-  },
+  { id: "0", link: "/#accueil" },
+  { id: "1", name: "Notre concept", link: "/#concept" },
+  { id: "2", name: "Nos services", link: "/#services" },
+  { id: "3", name: "Nos tarifs", link: "/#tarifs" },
+  { id: "4", name: "Prendre rendez-vous", link: "/#contacts" },
 ];
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef(null);
+
   const togglemenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  // Fermer menu au clic en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+    if (showMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showMenu]);
+
+  // Fermer menu quand on clique sur un lien dans ResponsiveMenu
+  const handleLinkClick = () => {
+    setShowMenu(false);
   };
 
   return (
@@ -56,6 +61,8 @@ const Navbar = ({ theme, setTheme }) => {
               />
             </a>
           </div>
+
+          {/* Liens de nav visibles seulement à partir de md */}
           <div className="hidden md:block">
             <ul className="flex items-center gap-8">
               {NavLinks.map((data) => (
@@ -68,21 +75,25 @@ const Navbar = ({ theme, setTheme }) => {
                   </a>
                 </li>
               ))}
-              <div>
-                {theme === "dark" ? (
-                  <VscLightbulb
-                    onClick={() => setTheme("light")}
-                    className="text-2xl cursor-pointer"
-                  />
-                ) : (
-                  <VscLightbulb
-                    onClick={() => setTheme("dark")}
-                    className="text-2xl cursor-pointer"
-                  />
-                )}
-              </div>
             </ul>
           </div>
+
+          {/* Bouton ampoule visible sur tous les écrans */}
+          <div className="flex items-center ml-4">
+            {theme === "dark" ? (
+              <VscLightbulb
+                onClick={() => setTheme("light")}
+                className="text-2xl cursor-pointer"
+              />
+            ) : (
+              <VscLightbulb
+                onClick={() => setTheme("dark")}
+                className="text-2xl cursor-pointer"
+              />
+            )}
+          </div>
+
+          {/* Menu burger / croix visible seulement sur petits écrans */}
           <div className="flex items-center gap-4 md:hidden">
             {showMenu ? (
               <button
@@ -102,7 +113,13 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+
+      {/* On passe la ref pour détecter clics en dehors et la callback pour fermer au clic sur lien */}
+      <ResponsiveMenu
+        showMenu={showMenu}
+        menuRef={menuRef}
+        onLinkClick={handleLinkClick}
+      />
     </nav>
   );
 };
