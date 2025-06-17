@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About";
@@ -13,6 +12,7 @@ import Legals from "./components/Legals";
 import ClientDashboard from "./components/ClientDashboard";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
+import LoginPage from "./components/Auth/LoginPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -65,6 +65,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard/*" element={user ? <ClientDashboard user={user} /> : <Navigate to="/login" />}/>
           <Route path="/Legals" element={<Legals />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
         </Routes>
         <Footer />
         <BackToTopButton />
