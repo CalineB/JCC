@@ -61,7 +61,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-black dark:border-gray-700"
               placeholder="Votre nom"
             />
           </label>
@@ -74,7 +74,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-black dark:border-gray-700"
               placeholder="exemple@mail.com"
             />
           </label>
@@ -87,7 +87,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="5"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-gray-700 dark:border-gray-600 resize-none"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 dark:bg-black dark:border-gray-700 resize-none"
               placeholder="Votre message"
             />
           </label>
@@ -120,8 +120,8 @@ const Contact = () => {
             <div className="bg-primary rounded-full p-3 text-white">
               <FaEnvelope size={20} />
             </div>
-            <a href="mailto:jcc@gmx.fr" className="text-lg hover:text-primary transition-colors">
-              jcc@gmx.fr
+            <a href="mailto:jcc971@gmx.fr" className="text-lg hover:text-primary transition-colors">
+              jcc971@gmx.fr
             </a>
           </div>
 

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
@@ -10,7 +10,9 @@ import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import BackToTopButton from "./components/HomeBtn/HomeBtn";
 import Legals from "./components/Legals";
-
+import ClientDashboard from "./components/ClientDashboard";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -21,6 +23,7 @@ const MainPage = ({ theme }) => (
     <Services />
     <Prices />
     <Contacts />
+    <ClientDashboard />
   </>
 );
 
@@ -30,6 +33,7 @@ const App = () => {
   );
 
   const element = document.documentElement;
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -57,6 +61,9 @@ const App = () => {
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
           <Route path="/" element={<MainPage theme={theme} />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard/*" element={user ? <ClientDashboard user={user} /> : <Navigate to="/login" />}/>
           <Route path="/Legals" element={<Legals />} />
         </Routes>
         <Footer />

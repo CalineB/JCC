@@ -5,29 +5,29 @@ import exterior from "../../assets/RedCar_Left.png";
 
 const PricesList = [
   // Lavage intérieur
-  { title: "Lavage intérieur", vehicleType: "Citadine", price: 45, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", image: inside },
-  { title: "Lavage intérieur", vehicleType: "Berline", price: 50, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", image: inside },
-  { title: "Lavage intérieur", vehicleType: "SUV", price: 60, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", image: front_side },
+  { title: "Lavage intérieur", vehicleType: "Citadine", price: 45, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", duration: "0h45", image: inside },
+  { title: "Lavage intérieur", vehicleType: "Berline", price: 50, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", duration: "0h45", image: inside },
+  { title: "Lavage intérieur", vehicleType: "SUV", price: 60, description: "Nettoyage complet de l’habitacle avec aspirateur, vapeur, plastiques, tissus et finitions premium.", duration: "0h55", image: front_side },
 
   // Lavage extérieur
-  { title: "Lavage extérieur", vehicleType: "Citadine", price: 35, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus.", image: exterior },
-  { title: "Lavage extérieur", vehicleType: "Berline", price: 40, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus." },
-  { title: "Lavage extérieur", vehicleType: "SUV", price: 50, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus.", image: exterior },
+  { title: "Lavage extérieur", vehicleType: "Citadine", price: 35, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus.", duration: "0h30", image: exterior },
+  { title: "Lavage extérieur", vehicleType: "Berline", price: 40, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus.", duration: "0h30" },
+  { title: "Lavage extérieur", vehicleType: "SUV", price: 50, description: "Lavage extérieur à la main avec eau de mer désalinisée, séchage microfibre et brillance pneus.", duration: "0h45", image: exterior },
 
   // Lavage complet
-  { title: "Lavage complet", vehicleType: "Citadine", price: 70, description: "Intérieur + extérieur complet avec finitions premium." },
-  { title: "Lavage complet", vehicleType: "Berline", price: 80, description: "Intérieur + extérieur complet avec finitions premium." },
-  { title: "Lavage complet", vehicleType: "SUV", price: 95, description: "Intérieur + extérieur complet avec finitions premium." },
+  { title: "Lavage complet", vehicleType: "Citadine", price: 70, description: "Intérieur + extérieur complet avec finitions premium.", duration: "1h30" },
+  { title: "Lavage complet", vehicleType: "Berline", price: 80, description: "Intérieur + extérieur complet avec finitions premium.", duration: "1h30" },
+  { title: "Lavage complet", vehicleType: "SUV", price: 95, description: "Intérieur + extérieur complet avec finitions premium.", duration: "1h45" },
 
   // Formule Express (dans chaque catégorie)
-  { title: "Formule Express", vehicleType: "Citadine", price: 40, description: "Lavage rapide mais soigné intérieur + extérieur." },
-  { title: "Formule Express", vehicleType: "Berline", price: 45, description: "Lavage rapide mais soigné intérieur + extérieur." },
-  { title: "Formule Express", vehicleType: "SUV", price: 50, description: "Lavage rapide mais soigné intérieur + extérieur." },
+  { title: "Formule Express", vehicleType: "Citadine", price: 40, description: "Lavage rapide mais soigné intérieur + extérieur.", duration: "1h00" },
+  { title: "Formule Express", vehicleType: "Berline", price: 45, description: "Lavage rapide mais soigné intérieur + extérieur.", duration: "1h00" },
+  { title: "Formule Express", vehicleType: "SUV", price: 50, description: "Lavage rapide mais soigné intérieur + extérieur.", duration: "1h15" },
 
   // Formule Detailing
-  { title: "Formule Detailing", vehicleType: "Citadine", price: 120, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf." },
-  { title: "Formule Detailing", vehicleType: "Berline", price: 140, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf." },
-  { title: "Formule Detailing", vehicleType: "SUV", price: 160, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf." },
+  { title: "Formule Detailing", vehicleType: "Citadine", price: 120, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf.", duration: "2h00" },
+  { title: "Formule Detailing", vehicleType: "Berline", price: 140, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf.", duration: "2h15" },
+  { title: "Formule Detailing", vehicleType: "SUV", price: 160, description: "Nettoyage en profondeur avec finitions haut de gamme, idéal pour remise à neuf.", duration: "2h30"  },
 
   // À la carte
   { title: "Nettoyage siège enfant", vehicleType: null, price: "À partir de 12€", description: "Désinfection vapeur + shampooing en profondeur pour hygiène optimale des sièges enfant." },
@@ -39,13 +39,13 @@ const PricesList = [
   { title: "Traitement anti-odeur", vehicleType: null, price: "À partir de 18€", description: "Traitement à l’ozone ou parfum longue durée pour un habitacle frais et agréable." },
 
   // Finitions premium
-  { title: "Polissage carrosserie", vehicleType: "Citadine", price: 60, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures." },
-  { title: "Polissage carrosserie", vehicleType: "Berline", price: 70, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures." },
-  { title: "Polissage carrosserie", vehicleType: "SUV", price: 90, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures." },
+  { title: "Polissage carrosserie", vehicleType: "Citadine", price: 60, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures.", duration: "3h00" },
+  { title: "Polissage carrosserie", vehicleType: "Berline", price: 70, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures.", duration: "3h15" },
+  { title: "Polissage carrosserie", vehicleType: "SUV", price: 90, description: "Une passe de polissage pour redonner brillance et atténuer les micro-rayures.", duration: "3h00" },
 
-  { title: "Pose céramique", vehicleType: "Citadine", price: 180, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie." },
-  { title: "Pose céramique", vehicleType: "Berline", price: 200, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie." },
-  { title: "Pose céramique", vehicleType: "SUV", price: 250, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie." }
+  { title: "Pose céramique", vehicleType: "Citadine", price: 180, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie.", duration: "4h30" },
+  { title: "Pose céramique", vehicleType: "Berline", price: 200, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie.", duration: "4h30" },
+  { title: "Pose céramique", vehicleType: "SUV", price: 250, description: "Protection longue durée de la peinture contre rayures, UV, salissures et pluie.", duration: "5h00" }
 ];
 
 const SubscriptionsList = [
@@ -131,7 +131,7 @@ export function PriceSelector() {
           {SubscriptionsList.map((sub) => (
             <div
               key={sub.vehicleType}
-              className="mb-6 p-4 border rounded-lg bg-white dark:bg-gray-800"
+              className="mb-6 p-4 border rounded-lg bg-white dark:bg-black"
             >
               <h3 className="text-lg font-bold mb-2">{sub.vehicleType}</h3>
               <p className="mb-3 text-gray-700 dark:text-gray-300">
@@ -158,11 +158,11 @@ export function PriceSelector() {
             <i className="mb-7 block text-sm text-gray-700 dark:text-gray-300">
                 <span className="font-semibold">Forfaits de 3, 6, 9 ou 12 lavages Express à partir de :{" "}</span>
             </i>
-            <div className="flex gap-8 flex-wrap justify-center">
+            <div className="flex gap-8">
               {CartePackages.map(({ washes, priceFrom }) => (
                 <div
                   key={washes}
-                  className="p-4 border rounded-lg bg-white dark:bg-gray-800 text-center min-w-[120px]"
+                  className="mb-6 p-4 border rounded-lg bg-white dark:bg-black"
                 >
                   <h3 className="font-semibold text-primary">{washes} lavages</h3>
                   <p className="text-lg font-bold">À partir de {priceFrom} €</p>
@@ -173,11 +173,11 @@ export function PriceSelector() {
 
           <section>
             <h2 className="text-xl font-semibold mb-4">Services à la carte</h2>
-            <div className="flex gap-8 flex-wrap justify-center">
+            <div className="flex gap-8 flex-wrap">
               {filtered.map((item) => (
                 <div
                   key={`${item.title}-${item.vehicleType || "A-la-carte"}`}
-                  className="p-4 border rounded-lg shadow hover:bg-primary group transition-colors duration-300 bg-white dark:bg-gray-800 text-center min-w-[250px]"
+                  className="mb-6 p-4 border rounded-lg bg-white dark:bg-black"
                 >
                   <h3 className="text-primary font-semibold group-hover:text-black dark:group-hover:text-white">
                     {item.title}
@@ -197,11 +197,12 @@ export function PriceSelector() {
 
       {/* Liste pour Citadine, Berline, SUV */}
       {vehicleType !== "Autres" && vehicleType !== "Forfaits" && (
-        <div className="flex gap-8 flex-wrap justify-center mt-8">
+        <div className="mb-8">
+            <h2 className="text-xl font-semibold mb-7">{vehicleType}</h2>
           {filtered.map((item) => (
             <div
               key={`${item.title}-${item.vehicleType}`}
-              className="p-4 border rounded-lg shadow hover:bg-primary group transition-colors duration-300 bg-white dark:bg-gray-800 text-center min-w-[250px]"
+              className="mb-6 p-4 border rounded-lg bg-white dark:bg-black"
             >
               <h3 className="text-primary font-semibold group-hover:text-black dark:group-hover:text-white">
                 {item.title}
@@ -228,7 +229,7 @@ const Prices = () => {
             <PriceSelector items={PricesList} />
             <div className="grid place-content-center mt-8">
                 <button data-aos="fade-up" className= "button-outline">
-                    Prendre rendez-vous
+                    <a href="/#contacts">Prendre rendez-vous</a>
                 </button>
             </div>
         </div>

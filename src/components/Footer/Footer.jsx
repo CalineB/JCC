@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10 py-10 px-4">
           <div>
-            <h1 className="text-xl sm:text-3xl font-bold mb-3">Jacob's Clean Cars</h1>
+            <h1 className="text-xl sm:text-3xl font-bold mb-3"><a href="/#accueil">Jacob's Clean Cars</a></h1>
             <p className="text-primary">Jantes, Carrosserie ? <i>Ça brille !</i></p>
 
             <div className="flex items-center gap-4 mt-6 justify-center">

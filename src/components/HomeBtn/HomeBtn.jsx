@@ -5,7 +5,6 @@ const BackToTopButton = () => {
   const [hover, setHover] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  // Affiche le bouton uniquement si scroll > 100px
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 100) {

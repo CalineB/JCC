@@ -63,7 +63,7 @@ const Legals = () => {
         <h2 className="text-2xl font-semibold mb-3 text-primary">3. Prise de rendez-vous</h2>
         <p>
           Les rendez-vous se prennent par <a href="tel:+590690000000" className="text-primary underline">téléphone</a>, 
-          <a href="mailto:jcc@gmx.fr" className="text-primary underline"> mail</a>, 
+          <a href="mailto:jcc971@gmx.fr" className="text-primary underline"> mail</a>, 
           <a href="https://wa.me/590690000000" target="_blank" rel="noopener noreferrer" className="text-primary underline"> WhatsApp</a>.
           Une confirmation écrite vous est systématiquement envoyée après validation.
           <br />
