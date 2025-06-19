@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt, FaCh
 const FooterLinks = [
   { title: "Mentions légales", link: "/legals" },
   { title: "Politique de confidentialité", link: "/legals/#privacy" },
-  { title: "Conditions générales", link: "/#conditions" },
+  { title: "Conditions générales", link: "/legals/#conditions" },
   { title: "Nous écrire", link: "/#contacts" }
 ];
 
